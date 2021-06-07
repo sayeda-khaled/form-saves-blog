@@ -29,10 +29,8 @@ class App extends Component {
   }
 
   componentDidMount(){
-
     this.setState({
-    blogs: defaultBlogs,
-
+      blogs: defaultBlogs,
     });
   }
 
@@ -42,19 +40,14 @@ class App extends Component {
     blogCopy.push(newEntry);
     this.setState({
       blogs: blogCopy,
-
     });
   }
   render() {
 
     return (
       <>
-
-      <BlogForm addBlog={this.addBlog}/>
-      <BlogList blogs={this.state.blogs}/>
-
-
-
+        <BlogForm addBlog={this.addBlog}/>
+        <BlogList blogs={this.state.blogs}/>
      </>
     );
   }
